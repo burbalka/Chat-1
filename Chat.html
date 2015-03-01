@@ -2,24 +2,23 @@
 <html>
 <head>
 <style>
-
-.scrollbox {
- overflow: auto;
- width: 800px;
- max-height: 350px;
- margin: 10px auto;
- border: 4px dashed #CC0052;
-
- background:
-  linear-gradient(#FFFFDC 30%, rgba(255,255,255,0)),
-  linear-gradient(rgba(255,255,255,0), #FFFFDC 40%) 0 100%,
-  radial-gradient(farthest-side at 50% 0, rgba(0,0,0,.2), rgba(0,0,0,0)),
-  radial-gradient(farthest-side at 50% 100%, rgba(0,0,0,.2), rgba(0,0,0,0)) 0 100%;
- background-repeat: no-repeat;
- background-size: 100% 70px, 100% 50px, 100% 19px, 100% 10px;
- background-attachment: local, local, scroll, scroll;
- background-color:#FFFFB8;
+input.button5 {
+  display: inline-block;
+  margin: 40px;
+  width: 50px;
+  height: 50px;
+    background: #CC0052;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 -3px #660029 inset;
+  transition: 0.2s;
+input.button5:hover { background: #660029; }
+input.button5:active {
+  background: #FF66A3;
+  box-shadow: 0 3px #FF66A3 inset;
 }
+}
+
 input.button6 {
 
   font-weight: 700;
@@ -55,15 +54,15 @@ a.button7:active {
   h1{ color:#660029;text-align:center;background-color:rgb(101,200,180);}
  fieldset{ background:#FF4D94;border: 4px dashed #CC0052;height:400px;width:90px;padding:10px;padding-bottom: 120px;}
  p{color:#FFCCCC; font-size:110%;}
-select{ width:170px;}
+
 </style>
 </head>
 <title>SweetChat</title></head>
 <body background="https://pp.vk.me/c621816/v621816487/12e92/0r6FQ5yHksg.jpg">
- <table width="100%"  align = center cellpadding=5px border=2px>
+ <table width="100%"  align = center cellpadding=5px>
 <caption align="center"><h1>Welcome to SweetChat!</h1><caption>
 <tr>
-<td valign="top"  rowspan=2>
+<td valign="top"  rowspan=3>
 <form>
 <fieldset>
    <p>Введите ваш никнейм</p>
@@ -73,7 +72,7 @@ select{ width:170px;}
    <p><textarea name="info"></textarea></p>
 <input class="button6" type="submit" name="next2" value="Сохранить" >
 <p>Выберите собеседника</p>
-<p><select multiple name="hero[]">
+<p><select multiple name="hero[]" style="width:170px;">
     
     <option value="Чебурашка">Чебурашка</option>
     <option selected value="Крокодил Гена">Крокодил Гена</option>
@@ -86,40 +85,29 @@ select{ width:170px;}
 </fieldset>
 </td>
 <td colspan=4>
-    <div  class="scrollbox">
- <ul>
-  <li>Тени нет сверху.</li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>Начинаем прокручивать блок</li>
-  <li>8</li>
-  <li>9</li>
-  <li>10</li>
-  <li>11</li>
-  <li>12</li>
-  <li>13</li>
-  <li>14</li>
-  <li>15</li>
-  <li>16</li>
-  <li>17</li>
-  <li>18</li>
-  <li>19</li>
-  <li>20</li>
-  <li>21</li>
-  <li>22</li>
-  <li>23</li>
-  <li>24</li>
-  <li>25</li>
-  <li>26</li>
-  <li>27</li>
-  <li>Конец!</li>
-  <li>Тут нет тени снизу.</li>
- </ul>
+<p align=center><select multiple name="chat" style="width:800px; height:300px;">
+    
+    <option value="Чебурашка">Чебурашка</option>
+    <option value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+    <option value="Крыса Лариса">Крыса Лариса</option>
+    <option value="Чебурашка">Чебурашка</option>
+    <option value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+    <option value="Крыса Лариса">Крыса Лариса</option>
+<option value="Чебурашка">Чебурашка</option>
+    <option value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+    <option value="Крыса Лариса">Крыса Лариса</option>
+<option value="Чебурашка">Чебурашка</option>
+    <option value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+    <option value="Крыса Лариса">Крыса Лариса</option>
 
-</div>
+   </select></p>
+</td>
+<td style="width:40px; background:rgb(101,200,180); border: 4px dashed #CC0052;"><input class="button5" type="submit" value="" style="background: url(http://www.defaulticon.com/sites/default/files/styles/icon-front-page-32x32-preview/public/field/image/edit.png?itok=nb2eY85A) center center no-repeat;"></input>
+<p><input class="button5" type="submit" value="" style="background: url(http://www.defaulticon.com/sites/default/files/styles/icon-front-page-32x32-preview/public/field/image/eraser.png?itok=ohy0hMWI) center center no-repeat;"></input></p>
 </td>
 </tr>
 
@@ -129,6 +117,7 @@ select{ width:170px;}
  height: 100px; " ></textarea></p>
 <p><input class="button6" type="submit" name="next" value="Отправить"></input></p>
 </td>
+<td></td>
 <td></td>
 </tr>
 
