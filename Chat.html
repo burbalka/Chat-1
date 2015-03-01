@@ -2,6 +2,27 @@
 <html>
 <head>
 <style>
+input.in{
+background: #FFE3AE;
+color: #BB285C;
+border: 2px dashed #CC0052;
+}
+textarea{
+border-radius: 8px 0 0 0;
+background: #FFE3AE;
+color: #BB285C;
+border: 2px dashed #CC0052;
+}
+select{
+background: #FFE3AE;
+color: #BB285C;
+scrollbar-base-color:#BB285C;
+scrollbar-3dlight-color:#BB285C;
+scrollbar-face-color:#BB285C;
+border: 2px dashed #CC0052;
+select.active{background-color: #FF66A3;}
+select.hover{background-color: #FF66A3;}
+}
 input.button5 {
   display: inline-block;
   margin: 40px;
@@ -66,7 +87,7 @@ a.button7:active {
 <form>
 <fieldset>
    <p>¬ведите ваш никнейм</p>
-   <p><input name="login" maxlength="10" size="20"></p>
+   <p><input name="login" maxlength="10" size="20" class="in"></p>
 <input type="submit"  class="button6" value="—охранить"></input>
    <p>¬ведите информацию о себе:</p>
    <p><textarea name="info"></textarea></p>
