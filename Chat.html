@@ -53,16 +53,17 @@ a.button7:active {
   box-shadow: 0 3px #FF66A3 inset;
 }
   h1{ color:#660029;text-align:center;background-color:rgb(101,200,180);}
- fieldset{ background:#FF4D94;border: 4px dashed #CC0052;height:235px;width:90px;padding:10px;padding-bottom: 120px;}
+ fieldset{ background:#FF4D94;border: 4px dashed #CC0052;height:400px;width:90px;padding:10px;padding-bottom: 120px;}
  p{color:#FFCCCC; font-size:110%;}
+select{ width:170px;}
 </style>
 </head>
 <title>SweetChat</title></head>
-<body background="bgChat.jpg">
- <table width="100%"  align = center cellpadding=5px >
+<body background="https://pp.vk.me/c621816/v621816487/12e92/0r6FQ5yHksg.jpg">
+ <table width="100%"  align = center cellpadding=5px border=2px>
 <caption align="center"><h1>Welcome to SweetChat!</h1><caption>
 <tr>
-<td valign="top" width=90px>
+<td valign="top"  rowspan=2>
 <form>
 <fieldset>
    <p>Введите ваш никнейм</p>
@@ -71,6 +72,16 @@ a.button7:active {
    <p>Введите информацию о себе:</p>
    <p><textarea name="info"></textarea></p>
 <input class="button6" type="submit" name="next2" value="Сохранить" >
+<p>Выберите собеседника</p>
+<p><select multiple name="hero[]">
+    
+    <option value="Чебурашка">Чебурашка</option>
+    <option selected value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+    <option value="Крыса Лариса">Крыса Лариса</option>
+   </select></p>
+<input class="button6" type="submit" name="next2" value="Выбрать" ></input>
+  
 </form>
 </fieldset>
 </td>
@@ -113,7 +124,6 @@ a.button7:active {
 </tr>
 
 <tr>
-<td></td>
 <td></td>
 <td colspan=2 align = center> <p><textarea name="info"; style="width: 500px;
  height: 100px; " ></textarea></p>
