@@ -16,14 +16,17 @@ input.in{
 <body background="https://pp.vk.me/c621816/v621816487/12e92/0r6FQ5yHksg.jpg";>
 
 <table width="100%"  align = center cellpadding=8px >
-    <caption align="center"><h1>Welcome to SweetChat!</h1><caption>
+    
+    <caption align="center" ><h1 id="loginChanged">Welcome to SweetChat!</h1><caption>
     <tr>
        <td valign="top"  rowspan=3>
        <form>
           <fieldset>
           <p>Введите ваш никнейм</p>
-          <p><input class="in" name="login" maxlength="10" size="20" ></p>
-          <input type="submit"  class="button6" value="Сохранить"></input>
+		  <div>
+          <p><input id="login" type="text" class="in" name="никнейм" placeholder="Логин" maxlength="10" size="20" ></p>
+          <a href="#" id="loginButton" type="button"  class="button" onclick="changeLogin()">Сохранить</a>
+		  </div>
           <p>Введите информацию о себе:</p>
           <p><textarea name="info"></textarea></p>
           <input class="button6" type="submit" name="next2" value="Сохранить" >
@@ -67,6 +70,18 @@ input.in{
 
 </table>
 
+<script>
+   function changeLogin()
+   {
+      var text, text2;
+	  text=document.getElementById("login").value;
+	  if(text!=""){
+	  text2="Welcome to SweetChat, "+text+"!";
+	  
+	  document.getElementById("loginChanged").innerHTML=text2;
+	  }
+   }
+</script>
 
 </body>
 </html>
