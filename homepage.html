@@ -55,7 +55,7 @@ input.in{
 	   </td>
 
        <td style="width:120px;">
-          
+          <img id="myImage" title="Connection with the server" onclick="changeImage()" src="https://pp.vk.me/c623219/v623219487/1ff4f/NRLTHIQcXvk.jpg" width="50" height="90">
        </td>
 	   
     </tr>
@@ -66,13 +66,23 @@ input.in{
     <td colspan=2 align = right> 
         <p><textarea id="mail" name="info"; style="width: 500px;height: 100px; " ></textarea></p>
     </td>
-    <td style="width: 300px; "><p><input class="button6" type="submit" name="next"  value="Отправить" onclick="Javascript:addRow()" style="height: 80px;"  ></input></p>
+    <td style="width: 300px;"><p><input class="button6" type="submit" name="next"  value="Отправить" onclick="Javascript:addRow()" style="height: 80px;"  ></input></p>
     </td>
     <td></td>
 
   </tr>
 
 </table>
+<script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("https://pp.vk.me/c623219/v623219487/1ff56/QTx1y06hllA.jpg")) {
+        image.src = "https://pp.vk.me/c623219/v623219487/1ff4f/NRLTHIQcXvk.jpg";
+    } else {
+        image.src = "https://pp.vk.me/c623219/v623219487/1ff56/QTx1y06hllA.jpg";
+    }
+}
+</script>
 </body>
 </html>
 
