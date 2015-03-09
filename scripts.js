@@ -23,12 +23,18 @@ function changeLogin()
  //   row.insertCell(0).innerHTML= '<p align="right"><input class="button5" type="submit" value ="" onClick="Javacsript:deleteRow(this)" title="Удалить сообщение" style="background: url(http://www.defaulticon.com/sites/default/files/styles/icon-front-page-32x32-preview/public/field/image/eraser.png?itok=ohy0hMWI) center center no-repeat;"></input><input class="button5" type="submit" title="Редактировать выделенное сообщение" value="" style="background: url(http://www.defaulticon.com/sites/default/files/styles/icon-front-page-32x32-preview/public/field/image/edit.png?itok=nb2eY85A) center center no-repeat;"></input></p>';
 	
  //   row.insertCell(1).innerHTML= myMail.value;
-    
+   
  var myMail = document.getElementById("mail");
+ 
  var tableContent="<tr>";
- tableContent+="<td width=60%>"+'<p align="right"><input class="button5" type="submit" value ="" onClick="Javacsript:deleteRow(this)" title="Удалить сообщение" style="background: url(http://www.defaulticon.com/sites/default/files/styles/icon-front-page-32x32-preview/public/field/image/eraser.png?itok=ohy0hMWI) center center no-repeat;"></input><input class="button5" type="submit" title="Редактировать выделенное сообщение" value="" style="background: url(http://www.defaulticon.com/sites/default/files/styles/icon-front-page-32x32-preview/public/field/image/edit.png?itok=nb2eY85A) center center no-repeat;"></input></p>'+"</td>";
- tableContent+="<td width=40%>"+myMail.value+"</td>";
+ tableContent+="<td width=60% valign='bottom'>"+'<p align="right"><input class="button5" type="submit" value ="" onClick="Javacsript:deleteRow(this)" title="Удалить сообщение" style="background: url(http://www.defaulticon.com/sites/default/files/styles/icon-front-page-32x32-preview/public/field/image/eraser.png?itok=ohy0hMWI) center center no-repeat;"></input><input class="button5" type="submit" title="Редактировать выделенное сообщение" value="" style="background: url(http://www.defaulticon.com/sites/default/files/styles/icon-front-page-32x32-preview/public/field/image/edit.png?itok=nb2eY85A) center center no-repeat;"></input></p>'+"</td>";
+ if(document.getElementById('login').value=="")
+ {
+	 document.getElementById('login').value="User";
+ }
+ tableContent+="<td width=40% >"+"<font color='black' align='right' size=4px style='vertical-align:'top';'>"+"<b>"+document.getElementById('login').value+":"+"</b>"+"</font>"+"<br>"+myMail.value+"</td>";
  myTableData.innerHTML+=tableContent;
+ document.getElementById('mail').value='';
 }
  
 function deleteRow(obj) {
